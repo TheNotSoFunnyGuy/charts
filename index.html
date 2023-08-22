@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style='width: 450px'>
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Green', 'Red', 'Blue', 'Orange'],
+        datasets: [{
+            label: '# of votes',
+            data: [2, 8, 3, 21],
+            backgroundColor: [
+                'rgba(0, 255, 132, 0.2)',
+                'rgba(255, 30, 30, 0.2)',
+                'rgba(0, 0, 255, 0.2)',
+                'rgba(255, 128, 0, 0.2)'
+            ],
+            borderColor: [
+                'rgba(0, 255, 0, 1)',
+                'rgba(255, 30, 30, 1)',
+                'rgba(0, 0, 255, 1)',
+                'rgba(255, 128, 0, 1)'
+            ],
+            borderWidth: 5
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          },
+          x: {
+            ticks: {
+              stepSize: 2
+            }
+          }
+        },
+        indexAxis: 'y'
+      }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style='width: 450px'>
+    <canvas id="myChart2"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart2');
+    var myChart2 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Vanilla', 'Chocolate', 'Strawberry', 'Mint Chocolate', 'Cookies & Cream'],
+            datasets: [{
+                label: '# of votes',
+                data: [3, 5, 1, 2, 1],
+                backgroundColor: [
+                    'rgba(244, 246, 161, 0.2)',
+                    'rgba(145, 103, 53, 0.2)',
+                    'rgba(248, 173, 253, 0.2)',
+                    'rgba(203, 251, 169, 0.2)',
+                    'rgba(205, 204, 177, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(244, 246, 161, 1)',
+                    'rgba(145, 103, 53, 1)',
+                    'rgba(248, 173, 253, 1)',
+                    'rgba(203,251 , 169, 1)',
+                    'rgba(205, 204, 177, 1)'
+                ],
+                borderWidth: 5
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                },
+                x: {
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            },
+            indexAxis: 'y'
+        }
+    });
+</script>
+</body>
+</html>
